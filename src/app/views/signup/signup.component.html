@@ -6,7 +6,7 @@
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-row">
           <div class="form-group col">
-            <label>Title</label>
+            <label class="h5">Title</label>
             <select
               formControlName="title"
               class="form-control"
@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="form-group col-5">
-            <label>First Name</label>
+            <label class="h5">First Name</label>
             <input
               type="text"
               formControlName="firstName"
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="form-group col-5">
-            <label>Last Name</label>
+            <label class="h5">Last Name</label>
             <input
               type="text"
               formControlName="lastName"
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label>Email</label>
+          <label class="h5">Email</label>
           <input
             type="text"
             formControlName="email"
@@ -74,7 +74,7 @@
         </div>
         <div class="form-row">
           <div class="form-group col">
-            <label>Password</label>
+            <label class="h5">Password</label>
             <input
               type="password"
               formControlName="password"
@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="form-group col">
-            <label>Confirm Password</label>
+            <label class="h5">Confirm Password</label>
             <input
               type="password"
               formControlName="confirmPassword"
@@ -122,7 +122,7 @@
             class="form-check-input"
             [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"
           />
-          <label for="acceptTerms" class="form-check-label"
+          <label class="h5" for="acceptTerms" class="form-check-label"
             >Accept Terms & Conditions</label
           >
           <div
@@ -133,7 +133,7 @@
           </div>
         </div>
         <div class="text-center">
-          <button class="btn btn-primary mr-1">Register</button>
+          <button class="btn btn-success">Register</button>
           <button class="btn btn-secondary" type="reset" (click)="onReset()">
             Cancel
           </button>

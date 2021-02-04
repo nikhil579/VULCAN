@@ -16,6 +16,11 @@ export const navItems: INavData[] = [
     icon: "icon-user",
   },
   {
+    name: "Account",
+    url: "/account",
+    icon: "icon-user",
+  },
+  {
     title: true,
     name: "Components",
   },

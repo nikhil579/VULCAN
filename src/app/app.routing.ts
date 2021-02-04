@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 // Import Containers
 import { DefaultLayoutComponent } from "./containers";
+import { AccountComponent } from "./views/account/account.component";
 
 import { P404Component } from "./views/error/404.component";
 import { P500Component } from "./views/error/500.component";
@@ -49,9 +50,22 @@ export const routes: Routes = [
     redirectTo: "signup",
     pathMatch: "full",
   },
+
+  {
+    path: "",
+    redirectTo: "account",
+    pathMatch: "full",
+  },
   // {
   //   path: "",
   //   component: SignupComponent,
+  //   data: {
+  //     title: "Sign-Up",
+  //   },
+  // },
+  // {
+  //   path: "account",
+  //   component: AccountComponent,
   //   data: {
   //     title: "Sign-Up",
   //   },
@@ -74,6 +88,11 @@ export const routes: Routes = [
         path: "signup",
         loadChildren: () =>
           import("./views/signup/signup.module").then((m) => m.SignupModule),
+      },
+      {
+        path: "account",
+        loadChildren: () =>
+          import("./views/account/account.module").then((m) => m.AccountModule),
       },
     ],
   },

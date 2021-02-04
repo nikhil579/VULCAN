@@ -41,6 +41,7 @@ import { AppRoutingModule } from "./app.routing";
 // Import 3rd party components
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { TabsModule } from "ngx-bootstrap/tabs";
+// import { AccountComponent } from './views/account/account.component';
 // import { SignupComponent } from './views/signup/signup.component';
 
 @NgModule({
@@ -67,6 +68,7 @@ import { TabsModule } from "ngx-bootstrap/tabs";
     P500Component,
     LoginComponent,
     RegisterComponent,
+    // AccountComponent,
     // SignupComponent
   ],
   providers: [
