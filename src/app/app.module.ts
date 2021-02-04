@@ -1,33 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
+import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
+import { PERFECT_SCROLLBAR_CONFIG } from "ngx-perfect-scrollbar";
+import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
+  suppressScrollX: true,
 };
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 // Import containers
-import { DefaultLayoutComponent } from './containers';
+import { DefaultLayoutComponent } from "./containers";
 
-import { P404Component } from './views/error/404.component';
-import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
+import { P404Component } from "./views/error/404.component";
+import { P500Component } from "./views/error/500.component";
+import { LoginComponent } from "./views/login/login.component";
+import { RegisterComponent } from "./views/register/register.component";
 
-import { AuthService } from './auth/auth.service';
+import { AuthService } from "./auth/auth.service";
 
-const APP_CONTAINERS = [
-  DefaultLayoutComponent
-];
+const APP_CONTAINERS = [DefaultLayoutComponent];
 
 import {
   AppAsideModule,
@@ -35,15 +33,15 @@ import {
   AppHeaderModule,
   AppFooterModule,
   AppSidebarModule,
-} from '@coreui/angular';
+} from "@coreui/angular";
 
 // Import routing module
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from "./app.routing";
 
 // Import 3rd party components
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TabsModule } from 'ngx-bootstrap/tabs';
-import { SignupComponent } from './views/signup/signup.component';
+import { BsDropdownModule } from "ngx-bootstrap/dropdown";
+import { TabsModule } from "ngx-bootstrap/tabs";
+// import { SignupComponent } from './views/signup/signup.component';
 
 @NgModule({
   imports: [
@@ -60,7 +58,7 @@ import { SignupComponent } from './views/signup/signup.component';
     AppSidebarModule,
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
   ],
   declarations: [
     AppComponent,
@@ -69,13 +67,15 @@ import { SignupComponent } from './views/signup/signup.component';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    SignupComponent
+    // SignupComponent
   ],
-  providers: [AuthService,
+  providers: [
+    AuthService,
     {
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
-  bootstrap: [ AppComponent ]
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

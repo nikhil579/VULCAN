@@ -8,21 +8,9 @@ import { P404Component } from "./views/error/404.component";
 import { P500Component } from "./views/error/500.component";
 import { LoginComponent } from "./views/login/login.component";
 import { RegisterComponent } from "./views/register/register.component";
-import { SignupComponent } from "./views/signup/signup.component";
+// import { SignupComponent } from "./views/signup/signup.component";
 
 export const routes: Routes = [
-  {
-    path: "",
-    redirectTo: "signup",
-    pathMatch: "full",
-  },
-  {
-    path: "signup",
-    component: SignupComponent,
-    data: {
-      title: "Sign-Up",
-    },
-  },
   {
     path: "",
     redirectTo: "login",
@@ -58,6 +46,18 @@ export const routes: Routes = [
   },
   {
     path: "",
+    redirectTo: "signup",
+    pathMatch: "full",
+  },
+  // {
+  //   path: "",
+  //   component: SignupComponent,
+  //   data: {
+  //     title: "Sign-Up",
+  //   },
+  // },
+  {
+    path: "",
     component: DefaultLayoutComponent,
     data: {
       title: "Home",
@@ -70,11 +70,11 @@ export const routes: Routes = [
             (m) => m.DashboardModule
           ),
       },
-      // {
-      //   path: "signup",
-      //   loadChildren: () =>
-      //     import("./views/signup/signup.module").then((m) => m.SignupModule),
-      // },
+      {
+        path: "signup",
+        loadChildren: () =>
+          import("./views/signup/signup.module").then((m) => m.SignupModule),
+      },
     ],
   },
   { path: "**", component: P404Component },
