@@ -33,7 +33,11 @@
               />
             </div>
           </div>
-          <div *ngIf="step == 2" formGroupName="contactDetails">
+          <div
+            *ngIf="step == 2"
+            formGroupName="contactDetails"
+            class="animated fadeIn"
+          >
             <h4>Contact Details</h4>
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
@@ -72,7 +76,11 @@
               ></textarea>
             </div>
           </div>
-          <div *ngIf="step == 3" formGroupName="personalDetails">
+          <div
+            *ngIf="step == 3"
+            formGroupName="personalDetails"
+            class="animated fadeIn"
+          >
             <h4>Personal Details</h4>
             <div class="form-group">
               <label for="exampleInputEmail1">Gender</label>
