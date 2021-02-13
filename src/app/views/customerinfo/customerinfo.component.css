@@ -1,0 +1,7 @@
+small{
+    color: red;
+}
+label {
+    pointer-events: none;
+    cursor: default;
+ }
