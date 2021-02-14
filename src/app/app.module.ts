@@ -41,6 +41,7 @@ import { AppRoutingModule } from "./app.routing";
 // Import 3rd party components
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { TabsModule } from "ngx-bootstrap/tabs";
+// import { CustomerinfoComponent } from './views/customerinfo/customerinfo.component';
 // import { AccountComponent } from './views/account/account.component';
 // import { SignupComponent } from './views/signup/signup.component';
 
@@ -68,6 +69,7 @@ import { TabsModule } from "ngx-bootstrap/tabs";
     P500Component,
     LoginComponent,
     RegisterComponent,
+    // CustomerinfoComponent,
     // AccountComponent,
     // SignupComponent
   ],

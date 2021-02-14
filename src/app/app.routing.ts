@@ -3,7 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 
 // Import Containers
 import { DefaultLayoutComponent } from "./containers";
-import { AccountComponent } from "./views/account/account.component";
+// import { AccountComponent } from "./views/account/account.component";
+// import { CustomerinfoComponent } from "./views/customerinfo/customerinfo.component";
 
 import { P404Component } from "./views/error/404.component";
 import { P500Component } from "./views/error/500.component";
@@ -70,6 +71,20 @@ export const routes: Routes = [
   //     title: "Sign-Up",
   //   },
   // },
+  // {
+  //   path: "",
+  //   redirectTo: "customerinfo",
+  //   pathMatch: "full",
+  // },
+ 
+  // {
+  //   path: "customerinfo",
+  //   component: CustomerinfoComponent,
+  //   data: {
+  //     title: "Customer Information",
+  //   },
+  // },
+
   {
     path: "",
     component: DefaultLayoutComponent,
@@ -93,6 +108,11 @@ export const routes: Routes = [
         path: "account",
         loadChildren: () =>
           import("./views/account/account.module").then((m) => m.AccountModule),
+      },
+      {
+        path: "customerinfo",
+        loadChildren: () =>
+          import("./views/customerinfo/customerinfo.module").then((m) => m.CustomerinfoModule),
       },
     ],
   },

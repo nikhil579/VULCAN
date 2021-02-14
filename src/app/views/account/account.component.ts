@@ -34,7 +34,7 @@ export class AccountComponent implements OnInit {
     }),
     personalDetails: new FormGroup({
       gender: new FormControl("null"),
-      education: new FormControl(""),
+      interest: new FormControl(""),
     }),
   });
   constructor(private route: Router) {}
@@ -59,8 +59,8 @@ export class AccountComponent implements OnInit {
     }
     this.step = this.step + 1;
     if (this.step == 4) {
-      this.route.navigate(["/thankyou"]);
-    }
+      this.route.navigate(["/dashboard"]);
+      alert("SUCCESS! \n\n" + JSON.stringify(this.multistep.value, null, 4));    }
   }
 
   previous() {

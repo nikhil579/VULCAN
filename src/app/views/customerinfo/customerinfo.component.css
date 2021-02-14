@@ -1,0 +1,10 @@
+small{
+    color: red;
+}
+label {
+    pointer-events: none;
+    cursor: default;
+    font-size: medium;
+    font-weight: 500;
+    
+ }
