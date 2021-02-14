@@ -1,0 +1,55 @@
+<!-- MAIN BRANCH -->
+<div class="animated fadeIn">
+  <div class="card m-3">
+    <h3 class="card-header">Sell Property</h3>
+    <div class="card-body">
+      <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+        <div class="form-group col-5">
+            <label class="h5">Property Title</label>
+            <input
+              type="text"
+              formControlName="title"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.title.errors }"
+            />
+            <div
+              *ngIf="submitted && f.title.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="f.title.errors.required">
+                Title is required
+              </div>
+            </div>
+          </div>
+          <!-- agent type -->
+          <div class="form-group">
+          <h4>Agents</h4>
+          <div>
+            <div>
+              <label
+                ><input type="radio" name="radio1" value="on" />
+                <!-- react-text: 10897 -->
+                <!-- /react-text -->
+                <!-- react-text: 10898 -->No Agent
+                <!-- /react-text -->
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="radio custom-radio">
+              <label
+                ><input type="radio" name="radio1" value="on" />
+                <!-- react-text: 10904 -->
+                <!-- /react-text -->
+                <!-- react-text: 10905 -->Find Agent
+                <!-- /react-text -->
+              </label>
+            </div>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

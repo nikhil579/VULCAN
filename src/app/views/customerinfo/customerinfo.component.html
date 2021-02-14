@@ -2,7 +2,11 @@
 
 <div class="animated fadeIn">
   <div class="card m-3">
+<<<<<<< HEAD
     <h3 class="card-header">Customer Information</h3>
+=======
+    <h3 class="card-header">Seller</h3>
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
     <div class="card-body">
       <div class="row">
         <form action="" style="width: 100%" [formGroup]="reactiveForm">
@@ -12,6 +16,7 @@
               <div class="col">
                 <div class="form-group">
                   <label for="fnText">First Name</label>
+<<<<<<< HEAD
                   <input type="text" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !firstName.valid && firstName.dirty,
@@ -21,11 +26,37 @@
                     class="form-text custom-invalid-feedback">Field is required</small>
                   <small *ngIf="firstName.errors?.minlength && firstName.dirty" id="fnHelp"
                     class="form-text custom-invalid-feedback">Name should be atleast 2 characters.</small>
+=======
+                  <input
+                    type="text"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !firstName.valid && firstName.dirty,
+                      'is-valid': firstName.valid
+                    }"
+                    formControlName="firstName"
+                    id="fnText"
+                    placeholder="Enter first name"
+                  />
+                  <small
+                    *ngIf="firstName.errors?.required && firstName.dirty"
+                    id="fnHelp"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+                  <small
+                    *ngIf="firstName.errors?.minlength && firstName.dirty"
+                    id="fnHelp"
+                    class="form-text custom-invalid-feedback"
+                    >Name should be atleast 2 characters.</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="lnText">Last Name</label>
+<<<<<<< HEAD
                   <input type="text" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !lastName.valid && lastName.dirty,
@@ -33,6 +64,25 @@
                     }" formControlName="lastName" id="lnText" placeholder="Enter last name" />
                   <small id="fnHelp" *ngIf="lastName.errors?.required && lastName.dirty"
                     class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                  <input
+                    type="text"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !lastName.valid && lastName.dirty,
+                      'is-valid': lastName.valid
+                    }"
+                    formControlName="lastName"
+                    id="lnText"
+                    placeholder="Enter last name"
+                  />
+                  <small
+                    id="fnHelp"
+                    *ngIf="lastName.errors?.required && lastName.dirty"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
             </div>
@@ -42,6 +92,7 @@
               <div class="col">
                 <div class="form-group">
                   <label for="email">Email</label>
+<<<<<<< HEAD
                   <input type="text" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !email.valid && email.dirty,
@@ -51,23 +102,68 @@
                     class="form-text custom-invalid-feedback">Field is required</small>
                   <small *ngIf="email.errors?.minlength && email.dirty" id="fnHelp"
                     class="form-text custom-invalid-feedback">Email Should be valid</small>
+=======
+                  <input
+                    type="text"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !email.valid && email.dirty,
+                      'is-valid': email.valid
+                    }"
+                    formControlName="email"
+                    id="email"
+                    placeholder="Enter Email Id"
+                  />
+                  <small
+                    *ngIf="email.errors?.required && email.dirty"
+                    id="fnHelp"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+                  <small
+                    *ngIf="email.errors?.minlength && email.dirty"
+                    id="fnHelp"
+                    class="form-text custom-invalid-feedback"
+                    >Email Should be valid</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="gender">Gender</label>
+<<<<<<< HEAD
                   <select id="inputgender" formControlName="gender" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !gender.valid && gender.dirty,
                       'is-valid': gender.valid
                     }">
+=======
+                  <select
+                    id="inputgender"
+                    formControlName="gender"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !gender.valid && gender.dirty,
+                      'is-valid': gender.valid
+                    }"
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                     <option selected [ngValue]="null">Choose...</option>
                     <option *ngFor="let item of userGender" [value]="item">
                       {{ item }}
                     </option>
                   </select>
+<<<<<<< HEAD
                   <small *ngIf="gender.errors?.required && gender.dirty" class="form-text custom-invalid-feedback">Field
                     is required</small>
+=======
+                  <small
+                    *ngIf="state.errors?.required && state.dirty"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
             </div>
@@ -76,6 +172,7 @@
               <div class="col">
                 <div class="form-group">
                   <label for="phoneNumber">Phone Number</label>
+<<<<<<< HEAD
                   <input type="number" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !phoneNumber.valid && phoneNumber.dirty,
@@ -83,11 +180,31 @@
                     }" formControlName="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number" />
                   <small id="fnHelp" *ngIf="phoneNumber.errors?.required && phoneNumber.dirty"
                     class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                  <input
+                    type="number"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !phoneNumber.valid && phoneNumber.dirty,
+                      'is-valid': phoneNumber.valid
+                    }"
+                    formControlName="phoneNumber"
+                    id="phoneNumber"
+                    placeholder="Enter Phone Number"
+                  />
+                  <small
+                    id="fnHelp"
+                    *ngIf="phoneNumber.errors?.required && phoneNumber.dirty"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="dateOfBirth">Date of Birth</label>
+<<<<<<< HEAD
                   <input type="date" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !dateOfBirth.valid && dateOfBirth.dirty,
@@ -95,6 +212,25 @@
                     }" formControlName="dateOfBirth" id="dateOfBirth" placeholder="Enter Date of Birth" />
                   <small id="fnHelp" *ngIf="dateOfBirth.errors?.required && dateOfBirth.dirty"
                     class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                  <input
+                    type="date"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !dateOfBirth.valid && dateOfBirth.dirty,
+                      'is-valid': dateOfBirth.valid
+                    }"
+                    formControlName="dateOfBirth"
+                    id="dateOfBirth"
+                    placeholder="Enter Date of Birth"
+                  />
+                  <small
+                    id="fnHelp"
+                    *ngIf="dateOfBirth.errors?.required && dateOfBirth.dirty"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
             </div>
@@ -109,15 +245,36 @@
               <div class="col-12">
                 <div class="form-group">
                   <label for="addText">Street Address</label>
+<<<<<<< HEAD
                   <input type="text" id="addText" [ngClass]="{
+=======
+                  <input
+                    type="text"
+                    id="addText"
+                    [ngClass]="{
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                       'form-control': true,
                       'is-invalid':
                         !streetAddress.valid && streetAddress.dirty,
                       'is-valid': streetAddress.valid
+<<<<<<< HEAD
                     }" formControlName="streetAddress" placeholder="Enter street address" />
                   <small *ngIf="
                       streetAddress.errors?.required && streetAddress.dirty
                     " class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                    }"
+                    formControlName="streetAddress"
+                    placeholder="Enter street address"
+                  />
+                  <small
+                    *ngIf="
+                      streetAddress.errors?.required && streetAddress.dirty
+                    "
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
               <div class="col-12">
@@ -125,6 +282,7 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="city">City</label>
+<<<<<<< HEAD
                       <input type="text" [ngClass]="{
                           'form-control': true,
                           'is-invalid': !city.valid && city.dirty,
@@ -132,28 +290,67 @@
                         }" formControlName="city" id="city" placeholder="Enter city" />
                       <small *ngIf="city.errors?.required && city.dirty" class="form-text custom-invalid-feedback">Field
                         is required</small>
+=======
+                      <input
+                        type="text"
+                        [ngClass]="{
+                          'form-control': true,
+                          'is-invalid': !city.valid && city.dirty,
+                          'is-valid': city.valid
+                        }"
+                        formControlName="city"
+                        id="city"
+                        placeholder="Enter city"
+                      />
+                      <small
+                        *ngIf="city.errors?.required && city.dirty"
+                        class="form-text custom-invalid-feedback"
+                        >Field is required</small
+                      >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="state">State</label>
+<<<<<<< HEAD
                       <select id="inputState" formControlName="state" [ngClass]="{
                           'form-control': true,
                           'is-invalid': !state.valid && state.dirty,
                           'is-valid': state.valid
                         }">
+=======
+                      <select
+                        id="inputState"
+                        formControlName="state"
+                        [ngClass]="{
+                          'form-control': true,
+                          'is-invalid': !state.valid && state.dirty,
+                          'is-valid': state.valid
+                        }"
+                      >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                         <option selected [ngValue]="null">Choose...</option>
                         <option *ngFor="let item of states" [value]="item">
                           {{ item }}
                         </option>
                       </select>
+<<<<<<< HEAD
                       <small *ngIf="state.errors?.required && state.dirty"
                         class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                      <small
+                        *ngIf="state.errors?.required && state.dirty"
+                        class="form-text custom-invalid-feedback"
+                        >Field is required</small
+                      >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="zipcode">Zip Code</label>
+<<<<<<< HEAD
                       <input type="text" formControlName="zipcode" [ngClass]="{
                           'form-control': true,
                           'is-invalid': !zipcode.valid && zipcode.dirty,
@@ -161,6 +358,25 @@
                         }" id="zipcode" placeholder="Enter Zipcode" />
                       <small *ngIf="zipcode.errors?.required && zipcode.dirty"
                         class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                      <input
+                        type="text"
+                        formControlName="zipcode"
+                        [ngClass]="{
+                          'form-control': true,
+                          'is-invalid': !zipcode.valid && zipcode.dirty,
+                          'is-valid': zipcode.valid
+                        }"
+                        id="zipcode"
+                        placeholder="Enter city"
+                      />
+                      <small
+                        *ngIf="zipcode.errors?.required && zipcode.dirty"
+                        class="form-text custom-invalid-feedback"
+                        >Field is required</small
+                      >
+                      <small *ngIf="zipcode.errors?.pattern && zipcode.dirty" class="form-text custom-invalid-feedback">Value should be 5 digit number</small>
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                     </div>
                   </div>
                 </div>
@@ -174,6 +390,7 @@
             </div>
             <!-- occupation -->
             <div class="row">
+<<<<<<< HEAD
               <div class="col">
                 <div class="form-group">
                   <div>
@@ -225,26 +442,95 @@
                 <hr />
               </div>
             </div>
+=======
+                <div class="col">
+                  <div class="form-group">
+                  <div>
+                    <label for="occupation" class="form-label"
+                      >Occupation</label
+                    >
+                  </div>
+                  <div
+                    class="form-check form-check-inline"
+                    *ngFor="
+                      let control of OccupationArray.controls;
+                      let i = index
+                    "
+                  >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      (change)="getOccupation()"
+                      [formControl]="control"
+                      id="inlineCheckbox{{ i }}"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="inlineCheckbox{{ i }}"
+                      >{{ userOccupation[i] }}</label
+                    >
+                  </div>
+                  <div>
+                    <small
+                      id="fnHelp"
+                      *ngIf="
+                        favOccupationError && checkOccupationControlsTouched()
+                      "
+                      class="form-text custom-invalid-feedback"
+                      >Atleast choose one</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
             <div class="row">
               <div class="col">
                 <div class="form-group">
                   <label for="fnText">Organisation Name</label>
+<<<<<<< HEAD
                   <input type="text" [ngClass]="{
+=======
+                  <input
+                    type="text"
+                    [ngClass]="{
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                       'form-control': true,
                       'is-invalid':
                         !organisationName.valid && organisationName.dirty,
                       'is-valid': organisationName.valid
+<<<<<<< HEAD
                     }" formControlName="organisationName" id="organisationName"
                     placeholder="Enter Organisation Name" />
                   <small *ngIf="
                       organisationName.errors?.required &&
                       organisationName.dirty
                     " id="fnHelp" class="form-text custom-invalid-feedback">Field is required</small>
+=======
+                    }"
+                    formControlName="organisationName"
+                    id="organisationName"
+                    placeholder="Enter Organisation Name"
+                  />
+                  <small
+                    *ngIf="
+                      organisationName.errors?.required &&
+                      organisationName.dirty
+                    "
+                    id="fnHelp"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="lnText">Designation</label>
+<<<<<<< HEAD
                   <input type="text" [ngClass]="{
                       'form-control': true,
                       'is-invalid': !designation.valid && designation.dirty,
@@ -429,6 +715,163 @@
 
 
 
+=======
+                  <input
+                    type="text"
+                    [ngClass]="{
+                      'form-control': true,
+                      'is-invalid': !designation.valid && designation.dirty,
+                      'is-valid': designation.valid
+                    }"
+                    formControlName="designation"
+                    id="designation"
+                    placeholder="Enter designation"
+                  />
+                  <small
+                    id="fnHelp"
+                    *ngIf="designation.errors?.required && designation.dirty"
+                    class="form-text custom-invalid-feedback"
+                    >Field is required</small
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- sector -->
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                <div>
+                  <label for="sector" class="form-label">Sector</label>
+                </div>
+                <div
+                  class="form-check form-check-inline"
+                  *ngFor="let control of SectorArray.controls; let i = index"
+                >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    (change)="getSector()"
+                    [formControl]="control"
+                    id="inlineCheckbox{{ i }}"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox{{ i }}">{{
+                    userSector[i]
+                  }}</label>
+                </div>
+                <div>
+                  <small
+                    id="fnHelp"
+                    *ngIf="
+                      favSectorError && checkSectorControlsTouched()
+                    "
+                    class="form-text custom-invalid-feedback"
+                    >Atleast choose one</small
+                  >
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <!-- residence -->
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Current Residence Type</label>
+              </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Current Residence</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Booking Preferences</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Budget</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Position Expectation</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Purpose of Buying</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Financing Detail</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Source of Project Information</label>
+                
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label"></label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Channel Partner Firm Name</label>
+              </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Channel Partner SM Name</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Channel Partner Mobile Number</label>
+              </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">Channel Partner RERA No.</label>
+              </div>
+              </div>
+            </div>
+
+
+
+            
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
             <!--  -->
             <!-- seperator -->
             <div class="row">
@@ -440,21 +883,36 @@
             <!-- final action buttons -->
             <div class="row justify-content-center">
               <div class="col-2">
+<<<<<<< HEAD
                 <button type="button" (click)="submitHandler()" class="btn btn-primary">
+=======
+                <button
+                  type="button"
+                  (click)="submitHandler()"
+                  class="btn btn-primary"
+                >
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
                   Submit
                 </button>
                 <!-- <button type="button" [disabled]="!reactiveForm.valid" (click)="submitHandler()" class="btn btn-primary">Submit</button> -->
               </div>
+<<<<<<< HEAD
               <div class="col-2">
                 <button type="button" (click)="onReset()" class="btn btn-info">
                   Clear
                 </button>
                 <!-- <button type="button" [disabled]="!reactiveForm.valid" (click)="submitHandler()" class="btn btn-primary">Submit</button> -->
               </div>
+=======
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35

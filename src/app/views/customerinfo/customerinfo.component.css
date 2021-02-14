@@ -4,7 +4,10 @@ small{
 label {
     pointer-events: none;
     cursor: default;
+<<<<<<< HEAD
     font-size: medium;
     font-weight: 500;
     
+=======
+>>>>>>> b62bc71d2fbc1d58d22203719f607414a6e26e35
  }
